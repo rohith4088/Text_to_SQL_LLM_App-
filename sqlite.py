@@ -9,7 +9,7 @@ cursor=connection.cursor()
 
 ## create the table
 table_info="""
-Create table STUDENT(NAME VARCHAR(25),CLASS VARCHAR(25),
+Create table student(NAME VARCHAR(25),CLASS VARCHAR(25),
 SECTION VARCHAR(25),MARKS INT);
 
 """
@@ -17,16 +17,16 @@ cursor.execute(table_info)
 
 ## Insert Some more records
 
-cursor.execute('''Insert Into STUDENT values('rohith','Data Science','A',90)''')
-cursor.execute('''Insert Into STUDENT values('pooja','Data Science','B',100)''')
-cursor.execute('''Insert Into STUDENT values('milo','Data Science','A',86)''')
-cursor.execute('''Insert Into STUDENT values('max','AI','A',50)''')
-cursor.execute('''Insert Into STUDENT values('nobody','AI','A',35)''')
+cursor.execute('''Insert Into student values('rohith','Data Science','A',90)''')
+cursor.execute('''Insert Into student values('pooja','Data Science','B',100)''')
+cursor.execute('''Insert Into student values('milo','Data Science','A',86)''')
+cursor.execute('''Insert Into student values('max','AI','A',50)''')
+cursor.execute('''Insert Into student values('nobody','AI','A',35)''')
 
 ## Disspaly ALl the records
 
 print("The isnerted records are")
-data=cursor.execute('''Select * from STUDENT''')
+data=cursor.execute('''Select * from student''')
 for row in data:
     print(row)
 
