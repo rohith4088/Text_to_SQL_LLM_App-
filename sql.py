@@ -51,7 +51,6 @@ prompt=[
 
 st.set_page_config(page_title="I can Retrieve Any SQL query")
 st.header("Fetching SQL Data From Gemini Pro")
-
 question=st.text_input("Please enter your query:",key="input")
 
 submit=st.button("Ask the question")
